@@ -1,0 +1,691 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".gpaFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow
+            android:id="@+id/row_gpa_display"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_gpa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="serif"
+                android:text="@string/gpa"
+                android:textAlignment="center"
+                android:textColor="@color/text"
+                android:textSize="45sp" />
+
+            <TextView
+                android:id="@+id/tv_showGPA"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="serif"
+                android:text="@string/gpa"
+                android:textAlignment="center"
+                android:textColor="@color/text"
+                android:textSize="45sp"
+                android:visibility="invisible" />
+        </TableRow>
+
+        <ScrollView
+            android:id="@+id/scrollView_gpa_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="520dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/row_gpa_display">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/item_background">
+
+                    <TextView
+                        android:id="@+id/tv_Grade1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/grade"
+                        android:textColor="@color/text"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_Grades1"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:entries="@array/Grade"
+                        android:textColor="@color/text" />
+
+                    <TextView
+                        android:id="@+id/tv_Credits1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/credits"
+                        android:textColor="@color/text"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_Credits1"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:entries="@array/Credits"
+                        android:textColor="@color/text" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/item_background">
+
+                    <TextView
+                        android:id="@+id/tv_Grade2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/grade"
+                        android:textColor="@color/text"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_Grades2"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:entries="@array/Grade"
+                        android:textColor="@color/text" />
+
+                    <TextView
+                        android:id="@+id/tv_Credits2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/credits"
+                        android:textColor="@color/text"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_Credits2"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:entries="@array/Credits"
+                        android:textColor="@color/text" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/item_background">
+
+                    <TextView
+                        android:id="@+id/tv_Grade3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/grade"
+                        android:textColor="@color/text"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_Grades3"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:entries="@array/Grade"
+                        android:textColor="@color/text" />
+
+                    <TextView
+                        android:id="@+id/tv_Credits3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/credits"
+                        android:textColor="@color/text"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_Credits3"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:entries="@array/Credits"
+                        android:textColor="@color/text" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/item_background">
+
+                    <TextView
+                        android:id="@+id/tv_Grade4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/grade"
+                        android:textColor="@color/text"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_Grades4"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:entries="@array/Grade"
+                        android:textColor="@color/text" />
+
+                    <TextView
+                        android:id="@+id/tv_Credits4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/credits"
+                        android:textColor="@color/text"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_Credits4"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:entries="@array/Credits"
+                        android:textColor="@color/text" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/item_background">
+
+                    <TextView
+                        android:id="@+id/tv_Grade5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/grade"
+                        android:textColor="@color/text"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_Grades5"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:entries="@array/Grade"
+                        android:textColor="@color/text" />
+
+                    <TextView
+                        android:id="@+id/tv_Credits5"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/credits"
+                        android:textColor="@color/text"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_Credits5"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:entries="@array/Credits"
+                        android:textColor="@color/text" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/item_background">
+
+                    <TextView
+                        android:id="@+id/tv_Grade6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/grade"
+                        android:textColor="@color/text"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_Grades6"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:entries="@array/Grade"
+                        android:textColor="@color/text" />
+
+                    <TextView
+                        android:id="@+id/tv_Credits6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/credits"
+                        android:textColor="@color/text"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_Credits6"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:entries="@array/Credits"
+                        android:textColor="@color/text" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/item_background">
+
+                    <TextView
+                        android:id="@+id/tv_Grade7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/grade"
+                        android:textColor="@color/text"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_Grades7"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:entries="@array/Grade"
+                        android:textColor="@color/text" />
+
+                    <TextView
+                        android:id="@+id/tv_Credits7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/credits"
+                        android:textColor="@color/text"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_Credits7"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:entries="@array/Credits"
+                        android:textColor="@color/text" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/item_background">
+
+                    <TextView
+                        android:id="@+id/tv_Grade8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/grade"
+                        android:textColor="@color/text"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_Grades8"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:entries="@array/Grade"
+                        android:textColor="@color/text" />
+
+                    <TextView
+                        android:id="@+id/tv_Credits8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/credits"
+                        android:textColor="@color/text"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_Credits8"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:entries="@array/Credits"
+                        android:textColor="@color/text" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/item_background">
+
+                    <TextView
+                        android:id="@+id/tv_Grade9"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/grade"
+                        android:textColor="@color/text"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_Grades9"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:entries="@array/Grade"
+                        android:textColor="@color/text" />
+
+                    <TextView
+                        android:id="@+id/tv_Credits9"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/credits"
+                        android:textColor="@color/text"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_Credits9"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:entries="@array/Credits"
+                        android:textColor="@color/text" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/item_background">
+
+                    <TextView
+                        android:id="@+id/tv_Grade10"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/grade"
+                        android:textColor="@color/text"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_Grades10"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:entries="@array/Grade"
+                        android:textColor="@color/text" />
+
+                    <TextView
+                        android:id="@+id/tv_Credits10"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/credits"
+                        android:textColor="@color/text"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_Credits10"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:entries="@array/Credits"
+                        android:textColor="@color/text" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/item_background">
+
+                    <TextView
+                        android:id="@+id/tv_Grade11"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/grade"
+                        android:textColor="@color/text"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_Grades11"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:entries="@array/Grade"
+                        android:textColor="@color/text" />
+
+                    <TextView
+                        android:id="@+id/tv_Credits11"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/credits"
+                        android:textColor="@color/text"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_Credits11"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:entries="@array/Credits"
+                        android:textColor="@color/text" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/item_background">
+
+                    <TextView
+                        android:id="@+id/tv_Grade12"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/grade"
+                        android:textColor="@color/text"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_Grades12"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:entries="@array/Grade"
+                        android:textColor="@color/text" />
+
+                    <TextView
+                        android:id="@+id/tv_Credits12"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/credits"
+                        android:textColor="@color/text"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/sp_Credits12"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:layout_weight="1"
+                        android:entries="@array/Credits"
+                        android:textColor="@color/text" />
+
+                </TableRow>
+
+            </TableLayout>
+        </ScrollView>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/scrollView_gpa_fragment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp"
+            android:paddingHorizontal="50dp">
+
+            <Button
+                android:id="@+id/btn_gpa_submit"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:backgroundTint="#9C9B59"
+                android:padding="15dp"
+                android:text="@string/submit"
+                android:textAllCaps="false"
+                android:textColor="@color/text"
+                android:textSize="23sp" />
+
+        </TableRow>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

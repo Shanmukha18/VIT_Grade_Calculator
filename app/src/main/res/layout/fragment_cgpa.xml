@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".cgpaFragment">
+
+    <TableLayout
+        android:id="@+id/cgpa_table_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/item_background"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_cgpa"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="2.5dp"
+                android:layout_weight="1"
+                android:fontFamily="serif"
+                android:text="@string/cgpa"
+                android:textAlignment="center"
+                android:textColor="@color/text"
+                android:textSize="32sp" />
+
+            <TextView
+                android:id="@+id/tv_showCGPA"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2.5dp"
+                android:layout_weight="1"
+                android:fontFamily="serif"
+                android:text="@string/cgpa"
+                android:textAlignment="center"
+                android:textColor="@color/text"
+                android:textSize="32sp"
+                android:visibility="invisible" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/et_last_credits"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/item_background"
+                android:hint="@string/credits_till_last_sem"
+                android:inputType="numberDecimal"
+                android:padding="15dp"
+                android:textAlignment="center"
+                android:textColor="@color/text"
+                android:textColorHint="@color/hint"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_last_cgpa"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/item_background"
+                android:hint="@string/cgpa_till_last_sem"
+                android:inputType="numberDecimal"
+                android:padding="15dp"
+                android:textAlignment="center"
+                android:textColor="@color/text"
+                android:textColorHint="@color/hint"
+                android:textSize="16sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/et_new_credits"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/item_background"
+                android:hint="@string/credits_in_this_sem"
+                android:inputType="numberDecimal"
+                android:padding="15dp"
+                android:textAlignment="center"
+                android:textColor="@color/text"
+                android:textColorHint="@color/hint"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/et_new_cgpa"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/item_background"
+                android:hint="@string/gpa_in_this_sem"
+                android:inputType="numberDecimal"
+                android:padding="15dp"
+                android:textAlignment="center"
+                android:textColor="@color/text"
+                android:textColorHint="@color/hint"
+                android:textSize="16sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:paddingHorizontal="50dp">
+
+            <Button
+                android:id="@+id/btn_cgpa_submit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:backgroundTint="#9C9B59"
+                android:padding="15dp"
+                android:text="@string/submit"
+                android:textAllCaps="false"
+                android:textColor="@color/text"
+                android:textSize="23sp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+</FrameLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/gpa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/btm_nav_icon_1"
+        android:title="@string/calculate_gpa_btm_nav_icon" />
+    <item
+        android:id="@+id/cgpa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/btn_nav_icon_2"
+        android:title="@string/calculate_cgpa_btm_nav_icon" />
+</menu>
